@@ -1,128 +1,148 @@
 /*https://fonts.google.com/specimen/Jua?subset=korean&sidebar.open=true&selection.family=Jua*/
 @import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
 * {
-  font-family: 'Jua', sans-serif;
+	font-family: 'Jua', sans-serif;
 }
 
-  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#e570e7+0,c85ec7+47,a849a3+100;Pink+3D+%233 */
+/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#e570e7+0,c85ec7+47,a849a3+100;Pink+3D+%233 */
 body {
-  background: rgb(229,112,231);
-  background: -moz-linear-gradient(top,  rgba(229,112,231,1) 0%, rgba(200,94,199,1) 47%, rgba(168,73,163,1) 100%); /
-  background: -webkit-linear-gradient(top,  rgba(229,112,231,1) 0%,rgba(200,94,199,1) 47%,rgba(168,73,163,1) 100%);
-  background: linear-gradient(to bottom,  rgba(229,112,231,1) 0%,rgba(200,94,199,1) 47%,rgba(168,73,163,1) 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e570e7', endColorstr='#a849a3',GradientType=0 );
-  margin: 0px;
+	background: rgb(229, 112, 231);
+	background: -moz-linear-gradient(
+		top,
+		rgba(229, 112, 231, 1) 0%,
+		rgba(200, 94, 199, 1) 47%,
+		rgba(168, 73, 163, 1) 100%
+	);
+	/background: -webkit-linear-gradient(
+		top,
+		rgba(229, 112, 231, 1) 0%,
+		rgba(200, 94, 199, 1) 47%,
+		rgba(168, 73, 163, 1) 100%
+	);
+	background: linear-gradient(
+		to bottom,
+		rgba(229, 112, 231, 1) 0%,
+		rgba(200, 94, 199, 1) 47%,
+		rgba(168, 73, 163, 1) 100%
+	);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e570e7', endColorstr='#a849a3',GradientType=0 );
+	margin: 0px;
 }
 
 #wrap {
-  position: relative;
-  overflow: hidden;
-  margin-top: 50px;
-  width: 100%;
-  max-width: 100%;
-  min-height: 100%;
+	position: relative;
+	overflow: hidden;
+	margin-top: 50px;
+	width: 100%;
+	max-width: 100%;
+	min-height: 100%;
 }
 .container {
-  box-sizing: border-box;
-  margin: 0 auto;
-  padding: 150px 0 25px 0;
-  width: 100%;
-  min-width: 100%;
+	box-sizing: border-box;
+	margin: 0 auto;
+	padding: 20px 0 25px 0;
+	width: 100%;
+	min-width: 100%;
 }
 
 #header {
-  position: fixed;
-  top: 0; left: 0;
-  z-index: 10;
-  box-sizing: border-box;
-  margin: 0 auto;
-  width: 100%;
-  max-height: 180px;
-  box-shadow: #ddd 0 0 10px 5px;
-  background:rgb(252, 252, 252);
-  animation: fade-in 0.3s ease-in-out;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 10;
+	box-sizing: border-box;
+	margin: 0 auto;
+	padding: 5px;
+	width: 100%;
+	height: 50px;
+	box-shadow: #ddd 0 0 10px 5px;
+	background: rgb(252, 252, 252);
+	animation: fade-in 0.3s ease-in-out;
 }
 
 #footer {
-  z-index: 10;
-  box-sizing: border-box;
-  width: 100%;
-  height: 60px;
-  padding: 10px 25px;
-  box-shadow: #ddd 0 0 15px 2px;
-  background: rgb(252, 252, 252);
-  font-weight: lighter;
-  animation: fade-in 0.3s ease-in-out 2s both;
-  opacity: 1;
+	z-index: 10;
+	box-sizing: border-box;
+	width: 100%;
+	height: 60px;
+	padding: 10px 25px;
+	box-shadow: #ddd 0 0 15px 2px;
+	background: rgb(252, 252, 252);
+	font-weight: lighter;
+	animation: fade-in 0.3s ease-in-out 2s both;
+	opacity: 1;
 }
 
 @media all and (min-width: 768px) {
-  #wrap {
-    margin-top: 115px;
-  }
-  .container {
-    padding: 150px 5% 37.5px 5%;
-    width: 80%;
-    min-width: 80%;
-    border-radius: 20px;
-  }
-  #header {
-    margin: 0 10%;
-    width: 80%;
-    height: auto;
-    border-radius: 20px;
-  }
+	#wrap {
+		margin-top: 115px;
+	}
+	.container {
+		padding: 60px 5% 37.5px 5%;
+		width: 80%;
+		min-width: 80%;
+		border-radius: 20px;
+	}
+	#header {
+		margin: 0 10%;
+		padding: 12.5px;
+		width: 80%;
+		height: 80px;
+		border-radius: 20px;
+	}
 
-  #footer {
-    margin: 40px 10% 0 10%;
-    padding: 15px 30px;
-    width: 80%;
-    height: 80px;
-    border-radius: 20px;
-  }
+	#footer {
+		margin: 40px 10% 0 10%;
+		padding: 15px 30px;
+		width: 80%;
+		height: 80px;
+		border-radius: 20px;
+	}
 }
 
 @media all and (min-width: 1024px) {
-  /* qna에서 margin-top을 없애야 함 */
-  #wrap {
-    margin-top: 150px;
-  }
-  .container {
-    padding: 150px 5% 40px 5%;
-    width: 70%;
-    min-width: 70%;
-    border-radius: 30px;
-  }
-  #header {
-    margin: 0 15%;
-    width: 70%;
-    max-height: 180px;
-    border-radius: 30px;
-  }
-  #footer {
-    margin: 60px 15% 0 15%;
-    padding: 25px 30px;
-    width: 70%;
-    height: 100px;
-    border-radius: 30px;
-  }
+	/* qna에서 margin-top을 없애야 함 */
+	#wrap {
+		margin-top: 150px;
+	}
+	.container {
+		padding: 100px 5% 40px 5%;
+		width: 70%;
+		min-width: 70%;
+		border-radius: 30px;
+	}
+	#header {
+		margin: 0 15%;
+		padding: 15px;
+		width: 70%;
+		height: 100px;
+		border-radius: 30px;
+	}
+	#footer {
+		margin: 60px 15% 0 15%;
+		padding: 25px 30px;
+		width: 70%;
+		height: 100px;
+		border-radius: 30px;
+	}
 }
 
 @media all and (min-width: 1440px) {
-  .container {
-    padding: 150px 3.5% 50px 3.5%;
-    width: 55%;
-    min-width: 55%;
-  }
-  #header {
-    margin: 0 22.5%;
-    width: 55%;
-    max-height: 180px;
-  }
-  #footer {
-    margin: 80px 22.5% 0 22.5%;
-    padding: 25px 30px;
-    width: 55%;
-    height: 100px;
-  }
+	.container {
+		padding: 100px 3.5% 50px 3.5%;
+		width: 55%;
+		min-width: 55%;
+	}
+	#header {
+		margin: 0 22.5%;
+		padding: 15px;
+		width: 55%;
+		height: 100px;
+	}
+	#footer {
+		margin: 80px 22.5% 0 22.5%;
+		padding: 25px 30px;
+		width: 55%;
+		height: 100px;
+	}
 }
