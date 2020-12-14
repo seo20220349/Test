@@ -48,7 +48,6 @@ h3,
 	box-sizing: border-box;
 	margin: 20px 25% 10px 25%;
 	width: 50%;
-	border-radius: 20px;
 }
 
 #name-input > input {
