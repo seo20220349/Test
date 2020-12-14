@@ -30,8 +30,8 @@ h3,
 	display: inline-block;
 	margin: 0 auto;
 	margin-top: 20px;
-	width: 100px;
-	height: 100px;
+	width: 250px;
+	height: 250px;
 }
 
 .time_logo {
@@ -85,7 +85,7 @@ h3,
 	line-height: 60px;
 	border-radius: 50px;
 	text-align: center;
-	background-color: rgba(0, 135, 245, 0.9);
+	background-color: #faaca8;
 	color: #fff;
 	font-weight: 600;
 	font-size: 32px;
