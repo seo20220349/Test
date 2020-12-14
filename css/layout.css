@@ -9,7 +9,6 @@ body {
 	background: #ddd6f3;   
 	background: -webkit-linear-gradient(to top, #ddd6f3, #faaca8);  
 	background: linear-gradient(to top, #ddd6f3, #faaca8); 
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e570e7', endColorstr='#a849a3',GradientType=0 );
 	margin: 0px;
 }
 
