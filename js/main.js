@@ -2,7 +2,7 @@ const main = document.getElementById('main');
 const header = document.getElementById('header');
 const footer = document.getElementById('footer');
 
-const begin = () => {
+export const begin = () => {
   header.style.animation =
     'going-up 0.4s forwards, ' +
     'fade-out 0.4s forwards';
@@ -28,7 +28,7 @@ const begin = () => {
   }, 1000);
 }
 
-const goNext = () => {
+export const goNext = () => {
   if (qIdx++ === qnaList.length - 1) {
     end();
     return;
