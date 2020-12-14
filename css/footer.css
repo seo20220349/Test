@@ -1,0 +1,13 @@
+.foot{
+	text-align: left;
+}
+
+.highlight {
+	color: rgb(87, 58, 189);
+	font-weight: bolder;
+}
+
+.author {
+	font-size: 10px;
+	font-weight: lighter;
+}
