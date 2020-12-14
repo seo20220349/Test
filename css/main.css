@@ -78,7 +78,6 @@ h3,
 }
 .warning {
 	color: rgb(231, 20, 20, 0.8);
-	margin: 3%;
 }
 .start-wrap {
 	margin: 0 20% 20px 20%;
@@ -93,7 +92,7 @@ h3,
 	text-align: center;
 	background-color: #faaca8;
 	border: 0;
-	color: #fff;
+	color: #eae6e2;
 	font-weight: 600;
 	font-size: 32px;
 	font-size: 2rem;
