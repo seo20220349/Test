@@ -6,25 +6,9 @@
 
 /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#e570e7+0,c85ec7+47,a849a3+100;Pink+3D+%233 */
 body {
-	background: rgb(229, 112, 231);
-	background: -moz-linear-gradient(
-		top,
-		rgba(229, 112, 231, 1) 0%,
-		rgba(200, 94, 199, 1) 47%,
-		rgba(168, 73, 163, 1) 100%
-	);
-	/background: -webkit-linear-gradient(
-		top,
-		rgba(229, 112, 231, 1) 0%,
-		rgba(200, 94, 199, 1) 47%,
-		rgba(168, 73, 163, 1) 100%
-	);
-	background: linear-gradient(
-		to bottom,
-		rgba(229, 112, 231, 1) 0%,
-		rgba(200, 94, 199, 1) 47%,
-		rgba(168, 73, 163, 1) 100%
-	);
+	background: #ddd6f3;   
+	background: -webkit-linear-gradient(to top, #faaca8, #ddd6f3);  
+	background: linear-gradient(to top, #faaca8, #ddd6f3); 
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e570e7', endColorstr='#a849a3',GradientType=0 );
 	margin: 0px;
 }
