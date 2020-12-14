@@ -186,7 +186,7 @@ const begin = () => {
   }, 1000);
 }
 
-export const load = () => {
+const load = () => {
   const msg = document.querySelector('.check-name');
   const start_btn = document.querySelector('.start');
 
@@ -213,6 +213,7 @@ export const load = () => {
       msg.innerHTML = err;
     }
   });
+
 }
 
 window.onload = load();

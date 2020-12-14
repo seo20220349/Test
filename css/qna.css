@@ -2,7 +2,9 @@
 #qna {
   display: none;
   opacity: 0;
+  background: white;
 }
+
 .status-bar {
   margin: 0 12.5% 20px;
   width: 75%;
@@ -21,7 +23,6 @@
   margin: 0 auto;
   padding: 20px;
   width: 80%;
-  box-shadow: #ddd 0px 0px 10px 5px;
   border-radius: 20px;
   background: rgb(252, 252, 252);
 }
@@ -67,7 +68,6 @@
     margin: 0 auto;
     padding: 30px;
     width: 80%;
-    box-shadow: #ddd 0px 0px 10px 5px;
     border-radius: 20px;
     background: rgb(252, 252, 252);
   }
