@@ -65,6 +65,10 @@ h3,
 	animation: fade-in 0.4s ease-out 1.4s both, going-down 0.4s ease-out 1.4s both;
 }
 
+#name-input :focus {
+	outline:none; 
+}
+
 
 .check-name {
 	display: inline-block;
@@ -74,7 +78,7 @@ h3,
 }
 .warning {
 	color: rgb(231, 20, 20, 0.8);
-	font-weight: bold;
+	margin: 3%;
 }
 .start-wrap {
 	margin: 0 20% 20px 20%;
@@ -100,6 +104,7 @@ h3,
 .start:hover,
 .start:focus {
 	animation-play-state: paused;
+	background-color: #ddd6f3;
 	border: none;
     outline: none;
 }
