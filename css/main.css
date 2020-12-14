@@ -25,6 +25,7 @@ h3,
 	font-size: 1.5rem;
 	font-weight: lighter;
 	color: #8d8d8d;
+	font-family: 'a고딕13', sans-serif;
 }
 
 .main_img {
@@ -86,7 +87,7 @@ h3,
 	border-radius: 50px;
 	text-align: center;
 	background-color: #faaca8;
-	border-color : #d9d4cf;
+	border: 0;
 	color: #fff;
 	font-weight: 600;
 	font-size: 32px;
@@ -98,6 +99,8 @@ h3,
 .start:hover,
 .start:focus {
 	animation-play-state: paused;
+	border: none;
+    outline: none;
 }
 .start:active {
 	animation-play-state: running;

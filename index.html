@@ -20,27 +20,24 @@
 		<link rel="stylesheet" type="text/css" href="css/footer.css" />
 		<link rel="stylesheet" type="text/css" href="css/animation.css" />
 
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		<!-- 스크롤 자동으로 맨 위로 올라가도록 -->
+		<script>
+			$(function () {
+				$('html, body').animate({ scrollTop: 0 }, 'fast');
+			});
+		</script>
+
 		<!-- 구글애즈 -->
 		<script
 			data-ad-client="ca-pub-4729413690339359"
 			async
 			src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
 		></script>
-		
-		<!-- 스크롤 자동으로 맨 위로 올라가도록 -->
-		<script>
-		window.onload = function() {
-			setTimeout (function() {
-				scrollTo(0,0);
-			}, 100);
-		}
-		</script>
 	</head>
 	<body>
 		<div id="wrap">
-			<header id="header">
-				
-			</header>
+			<header id="header"></header>
 			<section id="main" class="container">
 				<div id="titleBox">
 					<h1 class="mainText">
