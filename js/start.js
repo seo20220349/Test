@@ -1,4 +1,4 @@
-import { begin, goNext } from './main.js'
+import { begin, goNext, end, goResult } from './main.js'
 
 const u_name = document.querySelector('input[type=text]');
 const main = document.getElementById('main');
