@@ -67,7 +67,7 @@ body {
 	}
 	#header {
 		margin: 0 10%;
-		padding: 12.5px;
+		padding: 0px 12.5px 12.5px 0px;
 		width: 80%;
 		height: 150px;
 		border-radius: 20px;
@@ -95,7 +95,7 @@ body {
 	}
 	#header {
 		margin: 0 15%;
-		padding: 15px;
+		padding: 0px 15px 15px 0px;
 		width: 70%;
 		height: 150px;
 		border-radius: 30px;
@@ -117,7 +117,7 @@ body {
 	}
 	#header {
 		margin: 0 22.5%;
-		padding: 15px;
+		padding: 0px 15px 15px 0px;
 		width: 55%;
 		height: 150px;
 	}
