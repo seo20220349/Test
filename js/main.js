@@ -1,6 +1,7 @@
 const main = document.getElementById('main');
 const header = document.getElementById('header');
 const footer = document.getElementById('footer');
+const qna = document.getElementById('qna');
 
 const begin = () => {
   header.style.animation =
