@@ -93,11 +93,11 @@ body {
 		border-radius: 30px;
 	}
 	#footer {
-		margin: 40px 15% 0 15%;
-		padding: 20px 30px;
-		width: 70%;
-		height: 70px;
-		border-radius: 30px;
+		margin: 40px 10% 0 10%;
+		padding: 15px 30px;
+		width: 80%;
+		height: 80px;
+		border-radius: 20px;
 	}
 }
 
@@ -114,9 +114,8 @@ body {
 		height: 100px;
 	}
 	#footer {
-		margin: 80px 22.5% 0 22.5%;
+		margin: 45px 22.5% 0 22.5%;
 		padding: 25px 30px;
 		width: 55%;
-		height: 100px;
-	}
+		height: 80px;
 }
