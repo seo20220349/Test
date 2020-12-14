@@ -7,7 +7,8 @@
 	font-weight: bolder;
 }
 
-.author {
+.author { 
+	margin-top: 5px;
 	font-size: 10px;
 	font-weight: lighter;
 }
