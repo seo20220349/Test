@@ -10,7 +10,10 @@
 }
 
 :root {
-	--main-black: #
+	--main-black: #3e4149;
+	--main-darkgray: #444f59;
+	--main-pink: #fd999a;
+	--main-lightpink: #fec8c9;
 	
 }
 
