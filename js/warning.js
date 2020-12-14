@@ -1,3 +1,6 @@
+//main.js 임포트하기..? 확인안해봄
+document.write('<script src="./main.js><script>');
+
 const u_name = document.querySelector('input[type=text]');
 
 const load = () => {
