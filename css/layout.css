@@ -62,7 +62,7 @@ body {
     margin-top: 115px;
   }
   .container {
-    padding: 5% 5% 37.5px 5%;
+    padding: 10% 5% 37.5px 5%;
     width: 80%;
     min-width: 80%;
     border-radius: 20px;
@@ -71,7 +71,7 @@ body {
     margin: 0 10%;
     padding: 12.5px;
     width: 80%;
-    height: 100px;
+    height: 200px;
     border-radius: 20px;
   }
 
@@ -90,7 +90,7 @@ body {
     margin-top: 150px;
   }
   .container {
-    padding: 5% 5% 40px 5%;
+    padding: 10% 5% 40px 5%;
     width: 70%;
     min-width: 70%;
     border-radius: 30px;
@@ -99,7 +99,7 @@ body {
     margin: 0 15%;
     padding: 15px;
     width: 70%;
-    height: 100px;
+    height: 200px;
     border-radius: 30px;
   }
   #footer {
@@ -113,7 +113,7 @@ body {
 
 @media all and (min-width: 1440px) {
   .container {
-    padding: 3.5% 3.5% 50px 3.5%;
+    padding: 7% 3.5% 50px 3.5%;
     width: 55%;
     min-width: 55%;
   }
@@ -121,7 +121,7 @@ body {
     margin: 0 22.5%;
     padding: 15px;
     width: 55%;
-    height: 100px;
+    height: 200px;
   }
   #footer {
     margin: 80px 22.5% 0 22.5%;
