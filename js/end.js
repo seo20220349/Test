@@ -1,5 +1,5 @@
-function myFunction() {
-  var x = document.getElementById("myDIV");
+function showhide() {
+  var x = document.getElementById("copyright");
   if (x.style.display === "none") {
     x.style.display = "block";
   } else {

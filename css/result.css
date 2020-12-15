@@ -107,6 +107,9 @@
   background-size: cover;
   cursor: pointer;
 }
+#copyright {
+	display: none;
+}
 .tw {
   background-image: url('../img/tw.svg');
   /* 
