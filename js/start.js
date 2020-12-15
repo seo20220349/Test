@@ -137,7 +137,6 @@ const end = () => {
 //goNext : addAnswer(qNum.a[i].answer, i);
 const addAnswer = (answerTxt, idx) => {
 	const answer = document.createElement('button');
-	answer.id = 'answerButton';
 	answer.className += 'a box';
 	answer.innerHTML = answerTxt;
 	
