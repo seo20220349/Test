@@ -11,13 +11,16 @@
 		<meta name="author" content="Jaewon Lee" />
 		<meta name="keywords" content="십이간지로 알아보는 연애 유형" />
 		<meta name="description" content="십이간지로 알아보는 연애 유형" />
-		
+
 		<!--sns share-->
 		<meta property="og:url" content="https://twelvelevetype.netlify.app/" />
 		<meta property="og:title" content="십이간지로 알아보는 연애 유형" />
 		<meta property="og:type" content="website" />
-		<meta property="og:image" content="img_url" /> 
-		<meta property="og:description" content="십이간지로 알아보는 내 연애유형! 뭐? 나이로 보는 띠는 개나 줘버리라고?" />
+		<meta property="og:image" content="img_url" />
+		<meta
+			property="og:description"
+			content="십이간지로 알아보는 내 연애유형! 뭐? 나이로 보는 띠는 개나 줘버리라고?"
+		/>
 
 		<!--favicon-->
 		<link rel="shortcut icon" type="text/css" href="" />
@@ -35,6 +38,11 @@
 		<link rel="stylesheet" type="text/css" href="css/calc.css" />
 		<link rel="stylesheet" type="text/css" href="css/result.css" />
 
+		<script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
+		<script>
+			Kakao.init('da972007084fda5f2c305cef966b2dd4');
+			console.log(Kakao.isInitialized());
+		</script>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 		<!-- 스크롤 자동으로 맨 위로 올라가도록 -->
 		<script>
@@ -104,6 +112,13 @@
 					<div class="res desc"></div>
 					<!-- 설명끝 -->
 					<!-- 이후에 추가할 것, 공유하기(혹은 복사), copyright에 대한 설명 등 -->
+					<div>
+						<a id="kakao-link-btn" href="javascript:sendLink()">
+							<img
+								src="https://developers.kakao.com/assets/img/about/logos/kakaolink/kakaolink_btn_medium.png"
+							/>
+						</a>
+					</div>
 
 					<!--https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_toggle_hide_show-->
 					<button onclick="showhide()">CopyRight</button>
@@ -147,5 +162,31 @@
 		<script src="js/data.js"></script>
 		<script src="js/start.js"></script>
 		<script src="js/end.js"></script>
+		<script type="text/javascript">
+			function sendLink() {
+				Kakao.Link.sendDefault({
+					objectType: 'feed',
+					content: {
+						title: '십이간지 연애유형',
+						description: '#십이간지 #연애유형 #심리테스트 #연애테스트',
+						imageUrl:
+							'http://k.kakaocdn.net/dn/Q2iNx/btqgeRgV54P/VLdBs9cvyn8BJXB3o7N8UK/kakaolink40_original.png',
+						link: {
+							mobileWebUrl: 'https://twelvelevetype.netlify.app/',
+							webUrl: 'https://twelvelevetype.netlify.app/',
+						},
+					},
+					buttons: [
+						{
+							title: '테스트 하러가기',
+							link: {
+								mobileWebUrl: 'https://twelvelevetype.netlify.app/',
+								webUrl: 'https://twelvelevetype.netlify.app/',
+							},
+						},
+					],
+				});
+			}
+		</script>
 	</body>
 </html>
