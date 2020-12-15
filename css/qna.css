@@ -4,6 +4,7 @@
 	opacity: 0;
 	background: white;
 	font-family: 'a고딕13', sans-serif;
+	min-height: 100vh;
 }
 
 .status-bar {
