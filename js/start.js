@@ -43,7 +43,6 @@ const sortResult = (point) => {
 	return num;
 };
 
-
 const goResult = () => {
 	//pc 
 	if (pcMQL.matches) {
@@ -89,8 +88,6 @@ const goResult = () => {
 	const desc = document.querySelector('.res');
 	desc.innerHTML = infoList[grade].desc;
 	
-	
-	
 	//https://developer.mozilla.org/ko/docs/Web/API/WindowTimers/setTimeout
 	//0.6초
 	setTimeout(() => {
@@ -105,38 +102,53 @@ const goResult = () => {
 
 const end = () => {
 	qna.style.animation = '';
+	//https://www.w3schools.com/jsref/met_win_setinterval.asp
+	//주기적으로 흐려지며 y축으로 사라짐
 	const interval = setInterval(() => {
 		qna.style.opacity -= 0.1;
 		qna.style.transform = 'translateY(-1px)';
 	}, 50);
+	
+	//https://www.w3schools.com/jsref/met_win_cleartimeout.asp
+	//timeout 지정 해제
 	setTimeout(() => clearTimeout(interval), 500);
+	//qna display 지움
 	setTimeout(() => (qna.style.display = 'none'), 500);
+	
+	//계산중인 화면 등장
 	setTimeout(() => {
 		const calc = document.getElementById('calc');
 		calc.style.display = 'block';
 		calc.style.animation = 'going-up 0.5s forwards, ' + 'fade-in 0.5s forwards';
 	}, 700);
+	
+	//계산중인 화면 사라짐
 	setTimeout(() => {
 		calc.style.animation = '';
 		calc.style.animation = 'going-left 0.4s forwards, ' + 'fade-out 0.4s forwards';
 		setTimeout(() => {
 			calc.style.display = 'none';
+			//goResult
 			goResult();
 		}, 400);
 	}, 9000);
 };
 
+//goNext : addAnswer(qNum.a[i].answer, i);
 const addAnswer = (answerTxt, idx) => {
 	const answer = document.createElement('button');
-	const a = document.querySelector('.answer');
 	answer.className += 'a box';
 	answer.innerHTML = answerTxt;
+	
 	answer.addEventListener('click', () => {
+		
 		const parent = answer.parentNode;
 		const children = parent.childNodes;
 		for (let i in children) {
 			children[i].disabled = true;
 		}
+		
+		//face-out-5-4가 뭐하는건질 모르겠네..
 		parent.classList.add('fade-out-5-4');
 		setTimeout(() => {
 			select[qIdx] = idx;
@@ -147,28 +159,32 @@ const addAnswer = (answerTxt, idx) => {
 	});
 
 	setTimeout(
-		() => (answer.style.animation = 'going-down 0.25s forwards, fade-in 0.25s forwards'),
-		50
+		() => (answer.style.animation = 'going-down 0.25s forwards, fade-in 0.25s forwards'), 50
 	);
+	const a = document.querySelector('.answer');
 	a.appendChild(answer);
 };
 
 const goNext = () => {
 	if (qIdx++ === qnaList.length - 1) {
+		//qnaList를 다 돌았으면 end로
 		end();
 		return;
 	}
 
 	const status = document.querySelector('.status');
+	status.style.width = ENDPOINT * (qIdx + 1) + '%';
+	
 	const qNum = qnaList[qIdx];
 	const q = document.querySelector('.q');
-
-	status.style.width = ENDPOINT * (qIdx + 1) + '%';
 	q.innerHTML = qNum.q;
+	
+	//const qna = document.getElementById('qna');
 	qna.style.animation =
 		'fade-in 0.3s ease-in-out 0.4s forwards, ' + 'going-down 0.3s ease-in-out 0.4s forwards';
 
 	setTimeout(() => {
+		//endIdx는 없어도 되지 않나..?
 		const endIdx = qNum.a.length - 1;
 		for (let i in qNum.a) {
 			addAnswer(qNum.a[i].answer, i);
