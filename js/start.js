@@ -59,16 +59,15 @@ const goResult = () => {
 	const grade = sortResult(point); // return num
 	
 	const pTitle = document.querySelector('.p'); 
-	const res_point = document.querySelector('.point'); 
-	pTitle.innerHTML = u_name.value + ' 님의 점수는...';
-	res_point.innerHTML = point + '점';
+	pTitle.innerHTML = u_name.value + ' 님의 결과는?!';
 	
-	
+	/*
 	const pin = document.querySelector('.pin');
 	//console.log("mleft", infoList[grade].mLeft)
 	//data.js에 정의되어 있음. 애니메이션에 사용되는 것 같은데..?
 	pin.style.marginLeft = infoList[grade].mLeft;
-
+	*/
+	
 	//이미지 이름을 image-`grade`.png로 저장할 것
 	const img_url = 'img/image-' + grade + '.png';
 	//https://www.w3schools.com/jsref/met_document_createelement.asp
