@@ -97,11 +97,11 @@
 					<div class="res desc"></div>
 					<!-- 설명끝 -->
 					<!-- 이후에 추가할 것, 공유하기(혹은 복사), copyright에 대한 설명 등 -->
-					<a href="#" id="theLink">CopyRight</a>
-
-					<div class="theLinkDetails">
+					
+					<!--https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_toggle_hide_show-->
+					<button onclick="myFunction()">CopyRight</button>
+					<div id="myDIV">
 						Copyright (c) 2020 by Dain Kim (https://github.com/dev-dain/10-things-test)
-						Copyright (c) 2020 by Enrique Benitez (https://codepen.io/bntzio/pen/jrbJJo)
 						Permission is hereby granted, free of charge, to any person obtaining a copy
 						of this software and associated documentation files (the "Software"), to
 						deal in the Software without restriction, including without limitation the
@@ -126,26 +126,12 @@
 					© 2020
 					<p class="author">
 						Jaewon Lee, Minkyoung An, Chaewon Seo, Sangmin Lee, Juyeon Kang
-						<!-- Copyright (c) 2020 Dain Kim -->
 					</p>
 				</div>
 			</footer>
 		</div>
 		<script src="js/data.js"></script>
 		<script src="js/start.js"></script>
-		<script>
-			$('#theLink').click(function () {
-				var link = $(this);
-				var content = $('.theLinkDetails');
-
-				if (link.text() === 'Show Details') {
-					link.text('Hide Details');
-					content.css('display', 'block');
-				} else {
-					link.text('Show Details');
-					content.css('display', 'none');
-				}
-			});
-		</script>
+		<script src="js/end.js"></script>
 	</body>
 </html>
