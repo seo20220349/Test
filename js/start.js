@@ -172,7 +172,7 @@ const goNext = () => {
 	}
 
 	const status = document.querySelector('.status');
-	status.style.width = ENDPOINT * (qIdx + 1) + '%';
+	status.style.width = (100/ENDPOINT) * (qIdx + 1) + '%';
 	
 	const qNum = qnaList[qIdx];
 	const q = document.querySelector('.q');
