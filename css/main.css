@@ -90,6 +90,7 @@ h3,
 }
 .warning {
 	color: var(--warning-red);
+	font-family: 'a고딕14', sans-serif;
 }
 .start-wrap {
 	margin: 0 20% 20px 26.5%;
