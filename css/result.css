@@ -83,6 +83,7 @@
 }
 
 .copy {
+	background: ghostwhite;
 	background-image: url('../img/copy.png');
 }
 .kakao{
@@ -94,11 +95,9 @@
 }
 
 
-
 #copyright {
-	display: none;
 	padding: 0 7.5%;
-	text-align: left;
+	text-align: center;
 }
 
 #copyright > p {
