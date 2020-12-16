@@ -112,38 +112,49 @@
 					<div class="res desc"></div>
 					<!-- 설명끝 -->
 					<!-- 이후에 추가할 것, 공유하기(혹은 복사), copyright에 대한 설명 등 -->
-					<div>
-						<a id="kakao-link-btn" href="javascript:sendLink()">
-							<img
-								src="https://developers.kakao.com/assets/img/about/logos/kakaolink/kakaolink_btn_medium.png"
-							/>
+					<p>친구들과 공유하기</p>
+					<div class="hash">#심리테스트 #연애테스트 #십이간지로 알아보는 연애 유형</div>
+					<div id="share-box">
+						<a
+							onclick="javascript:copy()"
+							target="_blank"
+							alt="Share on Facebook"
+							title="링크 복사하기"
+						>
+							<span class="copy"></span>
+						</a>
+						<a
+							onclick="javascript:sendKakaoLink()"
+							target="_blank"
+							alt="Share on Facebook"
+							title="카카오톡에 공유하기"
+						>
+							<span class="kakao"></span>
+						</a>
+						<a
+							onclick="javascript:fb()"
+							target="_blank"
+							alt="Share on Facebook"
+							title="페이스북에 공유하기"
+						>
+							<span class="fb"></span>
 						</a>
 					</div>
 
 					<!--https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_toggle_hide_show-->
-					<button onclick="showhide()">CopyRight</button>
+					<button class="btn" onclick="showhide()">CopyRight</button>
 					<div id="copyright">
 						<p>
-							Copyright (c) 2020 by Dain Kim
-							(https://github.com/dev-dain/10-things-test)
-							<br />
-							Permission is hereby granted, free of charge, to any person obtaining a
-							copy of this software and associated documentation files (the
-							"Software"), to deal in the Software without restriction, including
-							without limitation the rights to use, copy, modify, merge, publish,
-							distribute, sublicense, and/or sell copies of the Software, and to
-							permit persons to whom the Software is furnished to do so, subject to
-							the following conditions: The above copyright notice and this permission
-							notice shall be included in all copies or substantial portions of the
-							Software.
-							<br />
-							THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
-							OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
-							MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
-							IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
-							CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
-							TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
-							SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+							Copyright (c) 2020 by Dain Kim (<a href="https://github.com/dev-dain/10-things-test">
+							https://github.com/dev-dain/10-things-test</a>) 
+							Icons made by
+							<a href="https://www.flaticon.com/authors/freepik" title="프리 픽"
+								>프리 픽</a
+							>
+							from
+							<a href="https://www.flaticon.com/" title="Flaticon"
+								>www.flaticon.com</a
+							>
 						</p>
 					</div>
 				</div>
@@ -162,31 +173,6 @@
 		<script src="js/data.js"></script>
 		<script src="js/start.js"></script>
 		<script src="js/end.js"></script>
-		<script type="text/javascript">
-			function sendLink() {
-				Kakao.Link.sendDefault({
-					objectType: 'feed',
-					content: {
-						title: '십이간지 연애유형',
-						description: '#십이간지 #연애유형 #심리테스트 #연애테스트',
-						imageUrl:
-							'http://k.kakaocdn.net/dn/Q2iNx/btqgeRgV54P/VLdBs9cvyn8BJXB3o7N8UK/kakaolink40_original.png',
-						link: {
-							mobileWebUrl: 'https://twelvelevetype.netlify.app/',
-							webUrl: 'https://twelvelevetype.netlify.app/',
-						},
-					},
-					buttons: [
-						{
-							title: '테스트 하러가기',
-							link: {
-								mobileWebUrl: 'https://twelvelevetype.netlify.app/',
-								webUrl: 'https://twelvelevetype.netlify.app/',
-							},
-						},
-					],
-				});
-			}
-		</script>
+		<script src="js/share.js"></script>
 	</body>
 </html>
