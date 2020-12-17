@@ -8,39 +8,142 @@ const u_name = document.querySelector('input[type=text]');
 const tabletMQL = window.matchMedia('all and (min-width: 768px)');
 const pcMQL = window.matchMedia('all and (min-width: 1024px)');
 
-//10개의 질문
-const ENDPOINT = 6;
+//7개의 질문
+const ENDPOINT = 7;
 //선택한 배열
 const select = [];
 let qIdx = -1;
 
+//3등까지 찾기
+function findIndicesOfMax(inp, count) {
+    var outp = [];
+    for (var i = 0; i < inp.length; i++) {
+        outp.push(i); // add index to output array
+        if (outp.length > count) {
+            outp.sort(function(a, b) { return inp[b] - inp[a]; }); // descending sort the output array
+            outp.pop(); // remove the last index (index of smallest element in output array)
+        }
+    }
+    return outp;
+}
+
 //스코어 계산
 const calcScore = () => {
-	let point = 0;
+	let Apoint = 0;
+	let Gpoint = 0;
+	let Ipoint = 0;
+	let Ppoint = 0;
+	let Rpoint = 0;
+	let Spoint = 0;
+	
 	for (let i = 0; i < ENDPOINT; i++) {
-		//선택한 배열을 돌면서 score점수를 가져와 합산
-		point += qnaList[i].a[select[i]].score;
+		//point += qnaList[i].a[select[i]].score;
+		console.log(qnaList[i].a[select[i]].type[0]);
+		const firstType = qnaList[i].a[select[i]].type[0];
+		switch (firstType) {
+			case 'A':
+				Apoint = Apoint+1;
+			case 'G':
+				Gpoint = Gpoint+1;
+			case 'I' :
+				Ipoint = Ipoint+1;
+			case 'P' :
+				Ppoint = Ppoint+1;
+			case 'R' :
+				Rpoint = Rpoint+1;
+			case 'S' :
+				Spoint = Spoint+1;
+		}
+		const secondType = qnaList[i].a[select[i]].type[0];
+		switch (secondType) {
+			case 'A':
+				Apoint = Apoint+1;
+			case 'G':
+				Gpoint = Gpoint+1;
+			case 'I' :
+				Ipoint = Ipoint+1;
+			case 'P' :
+				Ppoint = Ppoint+1;
+			case 'R' :
+				Rpoint = Rpoint+1;
+			case 'S' :
+				Spoint = Spoint+1;
+		}
 	}
-	return point;
-};
+	const resultPoint = [Apoint, Gpoint, Ipoint, Ppoint, Rpoint, Spoint];
+	const indices = findIndicesOfMax(resultPoint, 3);
+	
+	let firstType = '';
+	let secondType = '';
+	let thirdType = '';
+
+	switch(resultPoint[indices[0]]){
+		case Apoint:
+			firstType = 'A';
+		case Gpoint:
+			firstType = 'G';
+		case Ipoint :
+			firstType = 'I';
+		case Ppoint :
+			firstType = 'P';
+		case Rpoint :
+			firstType = 'R';
+		case Spoint :
+			firstType = 'S';
+		default:
+			console.log("Result error");
+	}
+
+	switch(resultPoint[indices[1]]){
+		case Apoint:
+			secondType = 'A';
+		case Gpoint:
+			secondType = 'G';
+		case Ipoint :
+			secondType = 'I';
+		case Ppoint :
+			secondType = 'P';
+		case Rpoint :
+			secondType = 'R';
+		case Spoint :
+			secondType = 'S';
+		default:
+			console.log("Result error");
+	}	
+	
+	switch(resultPoint[indices[2]]){
+		case Apoint:
+			thirdType = 'A';
+		case Gpoint:
+			thirdType = 'G';
+		case Ipoint :
+			thirdType = 'I';
+		case Ppoint :
+			thirdType = 'P';
+		case Rpoint :
+			thirdType = 'R';
+		case Spoint :
+			thirdType = 'S';
+		default:
+			console.log("Result error");
+	}
+	
+	let resultArray = [firstType, secondType, thirdType];
+	let sortArray = resultArray.sort();
+	let resultword = sortArray.join();
+	return resultword;
+}
 
 //합산된 점수의 scope에 따라 num반환
-const sortResult = (point) => {
-	let num = 0;
-	if (point <= 20) {
-		num = 0;
-	} else if (point <= 30) {
-		num = 1;
-	} else if (point <= 40) {
-		num = 2;
-	} else if (point <= 50) {
-		num = 3;
-	} else if (point <= 60) {
-		num = 4;
-	} else {
-		num = 5;
+const sortResult = (resultword) => {
+	const resultNum = 0;
+	const samplearray = ['AIS', 'AGS', 'AIP', 'AGP', 'RIS', 'RGS', 'RIP', 'RGP'];
+	for(var i = 0; i < samplearray.length; i++){
+		if( samplearray[i] === resultword ){
+			resultNum = i;
+		}
 	}
-	return num;
+	return resultNum;
 };
 
 const goResult = () => {
