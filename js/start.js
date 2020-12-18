@@ -28,18 +28,18 @@ const calcScore = () => {
 
 const calcScore = () => {
 	var pointArray = [
-		{ name : 'mouse', value: 0},
-		{ name : 'cow', value: 0},
-		{ name : 'tirger', value: 0},
-		{ name : 'rabbit', value: 0},
-		{ name : 'dragon', value: 0},
-		{ name : 'snake', value: 0},
-		{ name : 'horse', value: 0},
-		{ name : 'sheep', value: 0},
-		{ name : 'monkey', value: 0},
-		{ name : 'chick', value: 0},
-		{ name : 'dog', value: 0},
-		{ name : 'pig', value: 0},
+		{ name : 'mouse', value: 0, key: 0},
+		{ name : 'cow', value: 0, key: 1},
+		{ name : 'tiger', value: 0, key: 2},
+		{ name : 'rabbit', value: 0, key: 3},
+		{ name : 'dragon', value: 0, key: 4},
+		{ name : 'snake', value: 0, key: 5},
+		{ name : 'horse', value: 0, key: 6},
+		{ name : 'sheep', value: 0, key: 7},
+		{ name : 'monkey', value: 0, key: 8},
+		{ name : 'chick', value: 0, key: 9},
+		{ name : 'dog', value: 0, key: 10},
+		{ name : 'pig', value: 0, key: 11},
 	];
 	
 	for (let i = 0; i < ENDPOINT; i++) {
@@ -66,29 +66,10 @@ const calcScore = () => {
 	});
 	console.log("resultArray", resultArray);
 	
-	let resultword = resultArray[0].name;
+	let resultword = resultArray[0].key;
 	console.log("resultword", resultword);
 	return resultword;
 }
-
-//합산된 점수의 scope에 따라 num반환
-const sortResult = (point) => {
-	let num = 0;
-	if (point <= 20) {
-		num = 0;
-	} else if (point <= 30) {
-		num = 1;
-	} else if (point <= 40) {
-		num = 2;
-	} else if (point <= 50) {
-		num = 3;
-	} else if (point <= 60) {
-		num = 4;
-	} else {
-		num = 5;
-	}
-	return num;
-};
 
 const goResult = () => {
 	//pc 
@@ -103,20 +84,13 @@ const goResult = () => {
 		
 	const result = document.getElementById('result');
 	const point = calcScore(); //return point
-	const grade = sortResult(point); // return num
 	
 	const pTitle = document.querySelector('.p'); 
 	pTitle.innerHTML = u_name.value + ' 님의 결과는?!';
 	
-	/*
-	const pin = document.querySelector('.pin');
-	//console.log("mleft", infoList[grade].mLeft)
-	//data.js에 정의되어 있음. 애니메이션에 사용되는 것 같은데..?
-	pin.style.marginLeft = infoList[grade].mLeft;
-	*/
 	
 	//이미지 이름을 image-`grade`.png로 저장할 것
-	const img_url = 'img/image-' + grade + '.png';
+	const img_url = 'img/image-' + point + '.png';
 	//https://www.w3schools.com/jsref/met_document_createelement.asp
 	const res_img = document.createElement('img');
 	res_img.src = img_url; //img.src
@@ -128,11 +102,11 @@ const goResult = () => {
 	res_img_div.appendChild(res_img);
 	
 	const animal = document.querySelector('.result');
-	animal.innerHTML = infoList[grade].name;
+	animal.innerHTML = infoList[point].name;
 	
 	//description
 	const desc = document.querySelector('.res');
-	desc.innerHTML = infoList[grade].desc;
+	desc.innerHTML = infoList[point].desc;
 	
 	//https://developer.mozilla.org/ko/docs/Web/API/WindowTimers/setTimeout
 	//0.6초
