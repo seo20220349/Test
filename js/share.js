@@ -9,7 +9,7 @@ function sendKakaoLink() {
 			title: '십이간지 연애유형',
 			description: '#십이간지 #연애유형 #심리테스트 #연애테스트',
 			imageUrl:
-				'../img/share.png',
+				'https://twelvelevetype.netlify.app/img/main.png',
 			link: {
 				mobileWebUrl: 'https://twelvelevetype.netlify.app/',
 				webUrl: 'https://twelvelevetype.netlify.app/',
