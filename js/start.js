@@ -8,13 +8,14 @@ const u_name = document.querySelector('input[type=text]');
 const tabletMQL = window.matchMedia('all and (min-width: 768px)');
 const pcMQL = window.matchMedia('all and (min-width: 1024px)');
 
-//10개의 질문
-const ENDPOINT = 6;
+//12개의 질문
+const ENDPOINT = 12;
 //선택한 배열
 const select = [];
 let qIdx = -1;
 
 //스코어 계산
+/*
 const calcScore = () => {
 	let point = 0;
 	for (let i = 0; i < ENDPOINT; i++) {
@@ -23,6 +24,52 @@ const calcScore = () => {
 	}
 	return point;
 };
+*/
+
+const calcScore = () => {
+	var pointArray = [
+		{ name : 'mouse', value: 0},
+		{ name : 'cow', value: 0},
+		{ name : 'tirger', value: 0},
+		{ name : 'rabbit', value: 0},
+		{ name : 'dragon', value: 0},
+		{ name : 'snake', value: 0},
+		{ name : 'horse', value: 0},
+		{ name : 'sheep', value: 0},
+		{ name : 'monkey', value: 0},
+		{ name : 'chick', value: 0},
+		{ name : 'dog', value: 0},
+		{ name : 'pig', value: 0},
+	];
+	
+	for (let i = 0; i < ENDPOINT; i++) {
+		var target = qnaList[i].a[select[i]];
+		for (let j=0; j < target.type.length; j++){
+			for(let k=0; k < pointArray.length; k++){
+				if(target.type[j] === pointArray[k].name){
+					pointArray[k].value = pointArray[k].value + 1;
+				}
+			}
+		 }
+	}
+	
+	console.log("pointArray : ", pointArray);
+
+	let resultArray = resultPoint.sort(function(a, b){
+		if( a.value > b.value){
+			return 1;
+		}
+		if (a.value < b.value){
+			return -1;
+		}
+		return 0;
+	});
+	console.log("resultArray", resultArray);
+	
+	let resultword = resultArray[0];
+	console.log("resultword", resultword);
+	return resultword;
+}
 
 //합산된 점수의 scope에 따라 num반환
 const sortResult = (point) => {
