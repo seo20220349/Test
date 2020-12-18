@@ -55,7 +55,7 @@ const calcScore = () => {
 	
 	console.log("pointArray : ", pointArray);
 
-	let resultArray = resultPoint.sort(function(a, b){
+	let resultArray = pointArray.sort(function(a, b){
 		if( a.value > b.value){
 			return 1;
 		}
@@ -66,7 +66,7 @@ const calcScore = () => {
 	});
 	console.log("resultArray", resultArray);
 	
-	let resultword = resultArray[0];
+	let resultword = resultArray[0].name;
 	console.log("resultword", resultword);
 	return resultword;
 }
