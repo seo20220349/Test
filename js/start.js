@@ -62,7 +62,7 @@ const calcScore = () => {
 		}
 		return 0;
 	});
-	
+	console.log("결과 : ", resultArray);
 	let resultword = resultArray[0].key;
 	return resultword;
 }
