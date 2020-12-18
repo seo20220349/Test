@@ -89,13 +89,13 @@ const goResult = () => {
 	pTitle.innerHTML = u_name.value + ' 님의 결과는?!';
 	
 	
-	//이미지 이름을 image-`grade`.png로 저장할 것
+	//이미지 이름을 image-`point`.png로 저장할 것
 	const img_url = 'img/image-' + point + '.png';
 	//https://www.w3schools.com/jsref/met_document_createelement.asp
 	const res_img = document.createElement('img');
 	res_img.src = img_url; //img.src
-	res_img.alt = infoList[grade].name; //img.alt
-	res_img.title = infoList[grade].name; //img.title = img.name
+	res_img.alt = infoList[point].name; //img.alt
+	res_img.title = infoList[point].name; //img.title = img.name
 	
 	//https://developer.mozilla.org/ko/docs/Web/API/Node/appendChild
 	const res_img_div = document.querySelector('.art');
