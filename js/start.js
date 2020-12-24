@@ -28,63 +28,62 @@ const calcScore = () => {
 
 const calcScore = () => {
 	var pointArray = [
-		{ name : 'mouse', value: 0, key: 0},
-		{ name : 'cow', value: 0, key: 1},
-		{ name : 'tiger', value: 0, key: 2},
-		{ name : 'rabbit', value: 0, key: 3},
-		{ name : 'dragon', value: 0, key: 4},
-		{ name : 'snake', value: 0, key: 5},
-		{ name : 'horse', value: 0, key: 6},
-		{ name : 'sheep', value: 0, key: 7},
-		{ name : 'monkey', value: 0, key: 8},
-		{ name : 'chick', value: 0, key: 9},
-		{ name : 'dog', value: 0, key: 10},
-		{ name : 'pig', value: 0, key: 11},
+		{ name: 'mouse', value: 0, key: 0 },
+		{ name: 'cow', value: 0, key: 1 },
+		{ name: 'tiger', value: 0, key: 2 },
+		{ name: 'rabbit', value: 0, key: 3 },
+		{ name: 'dragon', value: 0, key: 4 },
+		{ name: 'snake', value: 0, key: 5 },
+		{ name: 'horse', value: 0, key: 6 },
+		{ name: 'sheep', value: 0, key: 7 },
+		{ name: 'monkey', value: 0, key: 8 },
+		{ name: 'chick', value: 0, key: 9 },
+		{ name: 'dog', value: 0, key: 10 },
+		{ name: 'pig', value: 0, key: 11 },
 	];
-	
+
 	for (let i = 0; i < ENDPOINT; i++) {
 		var target = qnaList[i].a[select[i]];
-		for (let j=0; j < target.type.length; j++){
-			for(let k=0; k < pointArray.length; k++){
-				if(target.type[j] === pointArray[k].name){
+		for (let j = 0; j < target.type.length; j++) {
+			for (let k = 0; k < pointArray.length; k++) {
+				if (target.type[j] === pointArray[k].name) {
 					pointArray[k].value = pointArray[k].value + 1;
 				}
 			}
-		 }
+		}
 	}
-	
-	let resultArray = pointArray.sort(function(a, b){
-		if( a.value > b.value){
+
+	let resultArray = pointArray.sort(function (a, b) {
+		if (a.value > b.value) {
 			return -1;
 		}
-		if (a.value < b.value){
+		if (a.value < b.value) {
 			return 1;
 		}
 		return 0;
 	});
-	console.log("결과 : ", resultArray);
+	console.log('결과 : ', resultArray);
 	let resultword = resultArray[0].key;
 	return resultword;
-}
+};
 
 const goResult = () => {
-	//pc 
+	//pc
 	if (pcMQL.matches) {
-		console.log('PC');
+		//console.log('PC');
 		wrap.style.marginTop = '150px';
-	//tablet
+		//tablet
 	} else if (tabletMQL.matches) {
-		console.log('tablet');
+		//console.log('tablet');
 		wrap.style.marginTop = '115px';
 	}
-		
+
 	const result = document.getElementById('result');
 	const point = calcScore(); //return point
-	
-	const pTitle = document.querySelector('.p'); 
+
+	const pTitle = document.querySelector('.p');
 	pTitle.innerHTML = u_name.value + ' 님의 결과는?!';
-	
-	
+
 	//이미지 이름을 image-`point`.png로 저장할 것
 	const img_url = 'img/image-' + point + '.png';
 	//https://www.w3schools.com/jsref/met_document_createelement.asp
@@ -92,18 +91,18 @@ const goResult = () => {
 	res_img.src = img_url; //img.src
 	res_img.alt = infoList[point].name; //img.alt
 	res_img.title = infoList[point].name; //img.title = img.name
-	
+
 	//https://developer.mozilla.org/ko/docs/Web/API/Node/appendChild
 	const res_img_div = document.querySelector('.art');
 	res_img_div.appendChild(res_img);
-	
+
 	const animal = document.querySelector('.result');
 	animal.innerHTML = infoList[point].name;
-	
+
 	//description
 	const desc = document.querySelector('.res');
 	desc.innerHTML = infoList[point].desc;
-	
+
 	//https://developer.mozilla.org/ko/docs/Web/API/WindowTimers/setTimeout
 	//0.6초
 	setTimeout(() => {
@@ -118,33 +117,22 @@ const goResult = () => {
 
 const end = () => {
 	qna.style.animation = '';
-	//https://www.w3schools.com/jsref/met_win_setinterval.asp
-	//주기적으로 흐려지며 y축으로 사라짐
 	const interval = setInterval(() => {
 		qna.style.opacity -= 0.1;
 		qna.style.transform = 'translateY(-1px)';
 	}, 50);
-	
-	//https://www.w3schools.com/jsref/met_win_cleartimeout.asp
-	//timeout 지정 해제
 	setTimeout(() => clearTimeout(interval), 500);
-	//qna display 지움
 	setTimeout(() => (qna.style.display = 'none'), 500);
-	
-	//계산중인 화면 등장
 	setTimeout(() => {
 		const calc = document.getElementById('calc');
 		calc.style.display = 'block';
 		calc.style.animation = 'going-up 0.5s forwards, ' + 'fade-in 0.5s forwards';
 	}, 700);
-	
-	//계산중인 화면 사라짐
 	setTimeout(() => {
 		calc.style.animation = '';
 		calc.style.animation = 'going-left 0.4s forwards, ' + 'fade-out 0.4s forwards';
 		setTimeout(() => {
 			calc.style.display = 'none';
-			//goResult
 			goResult();
 		}, 400);
 	}, 9000);
@@ -153,18 +141,15 @@ const end = () => {
 //goNext : addAnswer(qNum.a[i].answer, i);
 const addAnswer = (answerTxt, idx) => {
 	const answer = document.createElement('button');
+	const a = document.querySelector('.answer');
 	answer.className += 'a box';
 	answer.innerHTML = answerTxt;
-	
 	answer.addEventListener('click', () => {
-		
 		const parent = answer.parentNode;
 		const children = parent.childNodes;
 		for (let i in children) {
 			children[i].disabled = true;
 		}
-		
-		//face-out-5-4가 뭐하는건질 모르겠네..
 		parent.classList.add('fade-out-5-4');
 		setTimeout(() => {
 			select[qIdx] = idx;
@@ -175,9 +160,9 @@ const addAnswer = (answerTxt, idx) => {
 	});
 
 	setTimeout(
-		() => (answer.style.animation = 'going-down 0.25s forwards, fade-in 0.25s forwards'), 50
+		() => (answer.style.animation = 'going-down 0.25s forwards, fade-in 0.25s forwards'),
+		50
 	);
-	const a = document.querySelector('.answer');
 	a.appendChild(answer);
 };
 
@@ -189,12 +174,12 @@ const goNext = () => {
 	}
 
 	const status = document.querySelector('.status');
-	status.style.width = (100/ENDPOINT) * (qIdx + 1) + '%';
-	
+	status.style.width = (100 / ENDPOINT) * (qIdx + 1) + '%';
+
 	const qNum = qnaList[qIdx];
 	const q = document.querySelector('.q');
 	q.innerHTML = qNum.q;
-	
+
 	//const qna = document.getElementById('qna');
 	qna.style.animation =
 		'fade-in 0.3s ease-in-out 0.4s forwards, ' + 'going-down 0.3s ease-in-out 0.4s forwards';
