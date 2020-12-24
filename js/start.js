@@ -107,7 +107,7 @@ const goResult = () => {
 	//https://developer.mozilla.org/ko/docs/Web/API/WindowTimers/setTimeout
 	//0.6초
 	setTimeout(() => {
-		header.style.display = 'block';
+		header.style.display = 'none';
 		footer.style.display = 'block';
 		result.style.display = 'block';
 		header.style.animation = 'fade-in 0.3s forwards';
