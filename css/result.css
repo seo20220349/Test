@@ -78,13 +78,13 @@
 }
 
 #share-box {
-  box-sizing: border-box;
   margin: 25px 10% 30px 10%;
-  padding: 10px;
-  width: 80%;
-  height: 50px;
+  padding: 7px;
+  width: 40%;
+  height: 30px;
+  border-color: 2px;
+  border-color: #ddd6f3;
   border-radius: 40px;
-  background: #222;
 }
 
 #share-box span {
@@ -131,20 +131,20 @@
 .btn {
   box-sizing: border-box;
   margin: 0 30% 5px 30%;
-  width: 40%;
-  height: 50px;
-  line-height: 50px;
-  border: 1px solid;
+  width: 30%;
+  height: 35px;
+  line-height: 30px;
+  border: 1.5px solid;
   border-radius: 20px;
-  background: rgba(167, 105, 218, 0.7);
-  border-color: #d9d4cf; 
-  color: #fff;
+  background: white;
+  color: black;
   font-weight: 500;
   transition: background-color 0.2s ease-in-out;
+  border-color: #ffc8c6 ;
 }
 
 .btn:hover {
-  background: rgba(167, 105, 218, 1.0);
+  background: #ffc8c6;
 }
 
 .btn > a {
@@ -156,7 +156,7 @@
 
 .hash {
   padding: 15px 7.5% 0;
-  color: #9679ef;
+  color: #ad93ff;
   font-family: 'a고딕14', sans-serif;
   word-wrap: break-word;
 }
