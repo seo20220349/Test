@@ -15,7 +15,7 @@ const qnaList = [
     q: '2. 좋아하는 사람이 생겨 연락하고자 한다 ',
     a: [
       { answer: 'a. 바로 먼저 연락한다.', type: ['mouse', 'rabbit', 'tiger', 'monkey'] },
-      { answer: 'b. 언제 연락할지, 어떻게 연락해서 말할지 심사숙고하여 연락한다.', type: ['cow', 'horse', 'snake', 'dog'] },
+      { answer: 'b. 언제 연락할지, 어떻게 말할지 심사숙고하여 연락한다.', type: ['cow', 'horse', 'snake', 'dog'] },
       { answer: 'c. 상대방에게 먼저 연락 올 때까지 기다린다.', type: ['sheep', 'dragon', 'chick', 'pig'] },
     ]
   },
