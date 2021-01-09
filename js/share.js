@@ -84,7 +84,7 @@ function createDescription(){
 			var shareDescription = infoList[11].name;
 			break;		
 	}
-	var shareTitle = '방에서 떠나는 가상여행 결과'
+	var shareTitle = '십이간지 연예유형 결과'
 	const shareImageUrl = url + '/img/image/' + imageNumber + '.png';
 	sendKakaoLink(shareTitle, shareDescription, shareImageUrl);
 }
