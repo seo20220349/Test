@@ -81,6 +81,7 @@ const goResult = () => {
 	res_img.title = infoList[point].name; //img.title = img.name
 
 	//https://developer.mozilla.org/ko/docs/Web/API/Node/appendChild
+	
 	const res_img_div = document.querySelector('.art');
 	res_img_div.appendChild(res_img);
 

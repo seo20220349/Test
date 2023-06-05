@@ -102,7 +102,7 @@ background: #ffc8c6;
 	}
 }
 
-@media all and (min-width: 1440px) {
+@media all and (min-width: 1440px) {}
 	.container {
 		padding: 100px 3.5% 50px 3.5%;
 		width: 55%;
