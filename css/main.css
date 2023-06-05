@@ -10,11 +10,11 @@
 }
 
 :root {
-	--main-lightpink: #faaca8;
+	--main-lightpink: #a4dcff;
 	--main-lightpurple: #ddd6f3;
 	--main-gray: #8d8d8d;
-	--main-lightgray: #d9d4cf;
-	--warning-red: #f15c5c;
+	--main-lightgray: #a4dcff;
+	--warning-red: #ddd6f3;
 }
 
 h1,
@@ -34,7 +34,7 @@ h3,
 	font-size: 1.5rem;
 	font-weight: lighter;
 	color: var(--main-gray);
-	font-family: 'a고딕13', sans-serif;
+	font-family: 'Nanum Gothic', sans-serif;
 }
 
 .main_img {
@@ -92,15 +92,16 @@ h3,
 .start-wrap {
 	margin: 0 20% 0 26.5%;
 	width: 40%;
+	padding-top: 30px;
 }
 .start {
 	box-sizing: border-box;
 	width: 100%;
-	height: 60px;
+	height: 70px;
 	line-height: 60px;
 	border-radius: 50px;
 	text-align: center;
-	background-color: lightpink;
+	background-color: #a4dcff;
 	border: 0;
 	color: #ffffff;
 	font-weight: 600;

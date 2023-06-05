@@ -168,13 +168,6 @@
 	background: #dd2a7b;
 }
 
-.Copyr {
-	border-color: #ff75ef;
-}
-
-.Copyr:hover {
-	background: #ff75ef;
-}
 
 .hash {
 	padding: 25px 7.5% 25px;
@@ -212,10 +205,7 @@
 		font-size: 19.2px;
 		font-size: 1.2rem;
 	}
-	.hash {
-		font-size: 17.6px;
-		font-size: 1.1rem;
-	}
+	
 }
 
 @media all and (min-width: 1024px) {
@@ -236,10 +226,7 @@
 		font-size: 20.8px;
 		font-size: 1.3rem;
 	}
-	.hash {
-		font-size: 19.2px;
-		font-size: 1.2rem;
-	}
+	
 }
 
 @media all and (min-width: 1440px) {

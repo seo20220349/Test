@@ -1,7 +1,7 @@
 body {
-/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#e570e7+0,c85ec7+47,a849a3+100;Pink+3D+%233 */
-background: #ffc8c6; 
+background: #a4dcff; 
 }
+
 
 #wrap {
 	position: relative;
@@ -10,6 +10,7 @@ background: #ffc8c6;
 	width: 100%;
 	max-width: 100%;
 	min-height: 100%;
+	padding: 0px 0px 20px 0px;
 }
 .container {
 	box-sizing: border-box;
@@ -51,7 +52,7 @@ background: #ffc8c6;
 		margin-top: 115px;
 	}
 	.container {
-		padding: 60px 5% 37.5px 5%;
+		padding: 60px 5% 50px 5%;
 		width: 80%;
 		min-width: 80%;
 		border-radius: 20px;
@@ -75,7 +76,7 @@ background: #ffc8c6;
 }
 
 @media all and (min-width: 1024px) {
-	/* qna에서 margin-top을 없애야 함 */
+	
 	#wrap {
 		margin-top: 150px;
 	}
